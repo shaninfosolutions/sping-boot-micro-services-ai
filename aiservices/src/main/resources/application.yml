@@ -1,10 +1,9 @@
-spring:
-  application:
-    name: ai-services
-
 server:
   port: 8083
 
+spring:
+  application:
+    name: ai-services
   data:
     mongodb:
       uri: mongodb://localhost:27017/fitnessrecommendation
