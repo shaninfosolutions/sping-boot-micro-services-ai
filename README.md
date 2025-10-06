@@ -3,6 +3,7 @@ Spring Boot Microservices Project
 
 About the project
 This project is based Spring Boot Microservice to get Google Gemini AI to generaet the Activity Recommendation.
+
 Service invovled
   Eureka Service: Service Discovery  (Spring boot starter, Web, Eureka Server)
   User Service : To maintian the User info (Spring boot starter, Web, Eureka Client, Oracle DB)
