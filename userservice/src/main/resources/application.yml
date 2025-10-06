@@ -4,25 +4,26 @@ server:
 spring:
   application:
     name: user-service
+
   datasource:
-    driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://10.250.96.180:5432/nrdsdev
-    username: nrdsuser
-    password: Pass1234
+    url: jdbc:oracle:thin:@//localhost:1521/XEPDB1
+    username: testdb
+    password: testdb
+    driver-class-name: oracle.jdbc.OracleDriver
 
   jpa:
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
-
-    # ? Controls how Hibernate creates/updates tables
+    show-sql: true
     hibernate:
       ddl-auto: update
-
-    # Optional: Show SQL in logs
-    show-sql: true
-
-    # Optional: Format SQL for readability
     properties:
-      hibernate.format_sql: true
+      hibernate:
+        default_schema: TESTDB
+        format_sql: true
+
+logging:
+  level:
+    org.hibernate.SQL: DEBUG
+    org.hibernate.tool.hbm2ddl: DEBUG
 
 eureka:
   client:

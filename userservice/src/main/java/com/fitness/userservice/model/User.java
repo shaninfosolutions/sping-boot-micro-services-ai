@@ -7,7 +7,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "users",schema = "ndradmin")
+@Table(name = "fitusers")
 @Data
 public class User {
 
